@@ -11,9 +11,9 @@ public class HealthController {
 
     private static final Logger logger = LoggerFactory.getLogger(HealthController.class);
 
-   @GetMapping("/health")
-    public ResponseEntity<String> health() {
+    @GetMapping("/health")
+    public String health() {
         logger.info("Health check endpoint called");
-        return ResponseEntity.ok("OK");
+        return "OK";
     }
 }
